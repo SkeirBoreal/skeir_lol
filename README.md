@@ -1,3 +1,2 @@
 # skeirlol
-idk not doing much with this yet
-testing
+official landing site of skeir
