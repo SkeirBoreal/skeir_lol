@@ -1,4 +1,11 @@
 /* General styling */
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../fonts/Frutiger.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html {
     height: 100%;
     margin: 0;
