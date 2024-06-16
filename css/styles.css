@@ -10,7 +10,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Frutiger', 'Lato', sans-serif;
+    font-family: 'Frutiger', sans-serif;
     overflow-x: hidden;
     background: #000000;
     background: url('../images/site_wallpaper.jpg') no-repeat center center fixed;
