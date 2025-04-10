@@ -217,6 +217,13 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.post img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
 .post::before {
     content: '';
     position: absolute;
@@ -232,13 +239,6 @@ main {
 .post > * {
     position: relative;
     z-index: 1;
-}
-
-.post img {
-    display: block;
-    margin: 0 auto;
-    max-width: 50%;
-    height: auto;
 }
 
 .blog-posts-container::-webkit-scrollbar {
