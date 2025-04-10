@@ -234,6 +234,13 @@ main {
     z-index: 1;
 }
 
+.post img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
 .blog-posts-container::-webkit-scrollbar {
     display: none;
 }
