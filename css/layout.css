@@ -1,0 +1,236 @@
+/* logo/title */
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+    z-index: 1000;
+}
+
+.site-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 30px;
+    padding-bottom: 15px;
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 900; 
+}
+
+.site-branding::after {
+    display: none;
+}
+
+.site-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 3rem; 
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    top: 3px; 
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* pill header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px; 
+    
+    position: relative; 
+    margin: 10px auto 20px auto; 
+    
+    top: auto;
+    left: auto;
+    transform: none;
+    
+    width: fit-content;
+    min-width: 460px;
+    max-width: 95%;
+    
+    flex: 0 0 auto;
+    z-index: 1000;
+    
+    /* gloss base */
+    background: linear-gradient(
+        180deg, 
+        rgba(220, 250, 240, 0.9) 0%, 
+        rgba(255, 255, 255, 0.6) 100%
+    );
+    
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* 3d button */
+    box-shadow: 
+        0 10px 20px rgba(0, 50, 60, 0.1),
+        inset 0 2px 5px rgba(255, 255, 255, 1),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.05);
+        
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    height: 76px;
+    border-radius: 80px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* aero gloss */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; 
+    height: 50%; 
+    
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(255, 255, 255, 0.7) 70%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    
+    border-radius: 80px 80px 60% 60% / 80px 80px 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* secondary highlight */
+header::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    filter: blur(1px);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* nav container */
+nav { 
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    position: relative;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* nav links */
+nav a {
+    font-family: 'Varela Round', sans-serif;
+    color: #2c3e50;
+    font-weight: 800;
+    font-size: 21px;
+    padding: 12px 26px;
+    border-radius: 50px;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    white-space: nowrap;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* hover and active states */
+nav a:hover, nav a.active {
+    background: linear-gradient(180deg, #7cecc7 0%, #56c9a3 100%);
+    color: #004d40;
+    text-shadow: none;
+    box-shadow: 
+        0 4px 10px rgba(124, 236, 199, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+nav a.active {
+    background: #56c9a3;
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.15),
+        0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+nav a:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* main content layout */
+main {
+    flex: 1;
+    margin-top: 10px; 
+    padding: 20px;
+    max-width: 920px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .site-branding {
+        padding-top: 35px;
+        gap: 15px;
+        padding-right: 0;
+        flex-wrap: nowrap;
+    }
+    .site-branding::after {
+        display: none;
+    }
+    
+    .site-logo {
+        width: 65px; 
+        height: 65px;
+        border-radius: 16px;
+        flex-shrink: 0;
+    }
+    .site-title {
+        font-size: 1.75rem; 
+        white-space: normal;
+        text-align: left;
+    }
+
+    header { 
+        position: relative;
+        margin: 15px auto 0 auto;
+        
+        height: 64px; 
+        min-width: 0; 
+        width: 94%; 
+        max-width: 100%;
+        padding: 0 5px;
+    }
+    
+    header::before {
+        height: 50%;
+    }
+    
+    nav ul {
+        gap: 2px;
+    }
+    
+    nav a { 
+        font-size: 15px; 
+        padding: 8px 10px; 
+    }
+    
+    main { 
+        margin-top: 20px; 
+    }
+}

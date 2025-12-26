@@ -1,0 +1,39 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Varela+Round&display=swap');
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('../fonts/Frutiger.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* wii u gloss */
+    --glass-white: rgba(255, 255, 255, 0.75);
+    --glass-shine: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+    --wiiu-mint: #7cecc7;
+    --wiiu-text: #2c3e50;
+    --wiiu-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    --wiiu-border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Primary body font is now Istok Web */
+    font-family: 'Istok Web', 'Varela Round', sans-serif;
+    overflow-x: hidden;
+    background: transparent !important;
+    display: flex;
+    flex-direction: column;
+    color: var(--wiiu-text); /* use the variable you already defined */
+}
+
+p {
+    letter-spacing: 0.01em;
+}
+
+a { text-decoration: none; color: inherit; }
