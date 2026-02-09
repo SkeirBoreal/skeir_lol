@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
             
             const target = document.querySelector(selector);
             if (target) {
-                // replace the placeholder tag with the content to avoid nesting
                 target.outerHTML = data;
             }
         } catch (error) {

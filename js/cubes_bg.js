@@ -5,7 +5,6 @@
 
     const init = () =>
     {
-        // threejs basics
         ry = new THREE.Raycaster(); m = new THREE.Vector2(); pm = new THREE.Vector2();
         sc = new THREE.Scene(); cam = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 2000);
         cam.position.z = 600;
@@ -44,7 +43,6 @@
     {
         if(!document.getElementById(id)) return;
 
-        // hide on mobile screens smaller than 768px
         const isMobile = window.innerWidth < 768;
         lc.visible = rc.visible = !isMobile;
 
